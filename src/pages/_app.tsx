@@ -1,7 +1,19 @@
-import { AppProps } from 'next/app'
+import React from 'react'
+import App from 'next/app'
+import Head from 'next/head'
+import '../styles/default.less'
 
-function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+class myApp extends App {
+  render(): React.ReactElement {
+    const { Component, pageProps } = this.props
+    return (
+      <>
+        <Head>
+          <title>Chain-Shapshot</title>
+        </Head>
+        <Component {...pageProps} />
+      </>
+    )
+  }
 }
-
-export default App
+export default myApp
