@@ -1,12 +1,29 @@
-.panel-box {
-  background-color: #fff;
-  padding: 64px;
+.btn-list {
+  display: flex;
+  justify-content: space-between;
+
+  .bigger-btn {
+    height: 60px;
+    width: 200px;
+    margin-bottom: 16px;
+  }
 }
 
 .info-box {
   background-color: #f8fbff;
-  margin-top: 16px;
-  .rs-list-item {
-    background-color: #f8fbff;
+  margin-bottom: 32px;
+  .rs-list {
+    box-shadow: 0 1px 0 #ebeff4, 0 -1px 0 #ebeff4;
+    .rs-list-item {
+      background-color: #f8fbff;
+      .icon-btn {
+        width: 24px;
+        height: 24px;
+        padding: 0;
+        &:hover {
+          background-color: #ebeff4;
+        }
+      }
+    }
   }
 }
